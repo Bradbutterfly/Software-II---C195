@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.AppointmentMenu">
+   <opaqueInsets>
+      <Insets/>
+   </opaqueInsets>
+   <Label fx:id="AppointmentLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="75.0" prefWidth="873.0" text="Appointment" textAlignment="CENTER">
+      <font>
+         <Font size="51.0"/>
+      </font>
+   </Label>
+   <TableView fx:id="AppointmentTable" layoutX="37.0" layoutY="140.0" prefHeight="245.0" prefWidth="800.0">
+      <columns>
+         <TableColumn fx:id="AppointmentIDColumn" prefWidth="57.0" text="Appointment ID"/>
+         <TableColumn fx:id="TitleColumn" prefWidth="53.0" text="Title"/>
+         <TableColumn fx:id="DescriptionColumn" prefWidth="53.0" text="Description"/>
+         <TableColumn fx:id="LocationColumn" prefWidth="71.60000610351562" text="Location"/>
+         <TableColumn fx:id="ContactColumn" prefWidth="75.20001220703125" text="Contact"/>
+         <TableColumn fx:id="TypeColumn" prefWidth="56.0" text="Type"/>
+         <TableColumn fx:id="StartColumn" prefWidth="123.20001220703125" text="Start Date - Time"/>
+         <TableColumn fx:id="EndColumn" prefWidth="124.20001220703125" text="End Date - TIme"/>
+         <TableColumn fx:id="CustomerColumn" prefWidth="77.39996337890625" text="Customer_ID"/>
+         <TableColumn fx:id="UserColumn" prefWidth="81.79998779296875" text="User_ID"/>
+
+      </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+      </columnResizePolicy>
+   </TableView>
+   <Button fx:id="AddButtonLabel" layoutX="37.0" layoutY="408.0" mnemonicParsing="false" onAction="#AddButtonAction"
+           prefHeight="50.0" prefWidth="108.0" text="Add"/>
+   <Button fx:id="ModifyButtonLabel" layoutX="171.0" layoutY="408.0" mnemonicParsing="false"
+           onAction="#ModifyButtonAction" prefHeight="50.0" prefWidth="115.0" text="Modify"/>
+   <Button fx:id="ReturnButtonLabel" layoutX="722.0" layoutY="408.0" mnemonicParsing="false"
+           onAction="#ReturnButtonAction" prefHeight="50.0" prefWidth="115.0" text="Return"/>
+   <RadioButton fx:id="AllRadioLabel" layoutX="37.0" layoutY="87.0" mnemonicParsing="false" onAction="#AllRadioAction"
+                text="All">
+      <toggleGroup>
+         <ToggleGroup fx:id="Group1"/>
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="MonthRadioLabel" layoutX="117.0" layoutY="87.0" mnemonicParsing="false"
+                onAction="#MonthRadioAction" text="Month" toggleGroup="$Group1"/>
+   <RadioButton fx:id="WeekRadioLabel" layoutX="235.0" layoutY="87.0" mnemonicParsing="false"
+                onAction="#WeekRadioAction" text="Week" toggleGroup="$Group1"/>
+   <Button fx:id="DeleteButtonLabel" layoutX="313.0" layoutY="408.0" mnemonicParsing="false"
+           onAction="#DeleteButtonAction" prefHeight="50.0" prefWidth="115.0" text="Delete"/>
+</AnchorPane>

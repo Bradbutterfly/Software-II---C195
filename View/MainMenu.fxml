@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.MainMenu">
+    <Label fx:id="MenuLabel" alignment="CENTER" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="600.0" text="Menu">
+        <font>
+            <Font name="System Bold" size="48.0"/>
+        </font>
+    </Label>
+    <Button fx:id="CustomerButtonLabel" contentDisplay="CENTER" layoutX="238.0" layoutY="120.0" maxHeight="-Infinity"
+            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+            onAction="#CustomerButtonAction" prefHeight="46.0" prefWidth="125.0" text="Customer"/>
+    <Button fx:id="AppointmentButtonLabel" contentDisplay="CENTER" layoutX="238.0" layoutY="180.0" maxHeight="-Infinity"
+            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+            onAction="#AppointmentButtonAction" prefHeight="46.0" prefWidth="125.0" text="Appointment"
+            textAlignment="CENTER"/>
+    <Button fx:id="ReportButtonLabel" layoutX="238.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ReportButtonAction"
+            prefHeight="46.0" prefWidth="125.0" text="Report"/>
+    <Button fx:id="ReturnButtonLabel" layoutX="238.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ReturnButtonAction"
+            prefHeight="46.0" prefWidth="125.0" text="Return"/>
+</AnchorPane>
